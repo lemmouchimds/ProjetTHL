@@ -8,12 +8,12 @@ namespace ProjetTHL
 {
     public abstract class AEF
     {
-        protected readonly List<char> Alpha = new();
-        protected readonly List<int> Etats = new();
+        protected List<char> Alpha = new();
+        protected List<int> Etats = new();
         
         protected int EtatInit { get; set; }
         protected List<int> EtatsFinaux = new();
-        protected readonly Dictionary<Tuple<char, int>, int> transitions = new();
+        protected Dictionary<Tuple<char, int>, int> transitions = new();
     }
 
     public record State(int etat, bool isFinal, bool IsNewAdded);
